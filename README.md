@@ -6,7 +6,7 @@ Este repositório contém uma coleção de exercícios didáticos em Python que 
 
 O repositório está organizado da seguinte maneira:
 
-- **challenges/** 📁
+- **python-challenges/** 📁
   - Esta pasta contém os desafios, cada um em seu arquivo .py separados.
 
 
