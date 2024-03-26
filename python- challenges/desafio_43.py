@@ -8,6 +8,8 @@ import os
 import re
 
 def get_name():
+    os.system('cls')
+    print('-- SISTEMA DE CADASTRO --')
     cont = True
     while cont:
         name = input('Nome: ')
@@ -15,8 +17,10 @@ def get_name():
             cont = False
             return name
         else:
+            os.system('cls')
             print('Nome inválido! Pressione ENTER para tentar novamente')
             input()
+            os.system('cls')
 
 def get_year():
     cont = True
@@ -24,7 +28,10 @@ def get_year():
         try:
             year = int(input('Idade: '))
         except Exception as e:
+            os.system('cls')
             print('Valor Inválido! Pressio ENTER para tentar novamente')
+            input()
+            os.system('cls')
         else:
             cont = False
             return year
@@ -37,16 +44,18 @@ def get_sex():
             cont = False
             return sex
         else:
+            os.system('cls')
             print('Nome inválido! Pressione ENTER para tentar novamente')
             input()
-        
+            os.system('cls')
+
+def calculate_average_age(age_list):
+    age_media = sum(age_list) / len(age_list)
+    return age_media
 
 
-nome_usuario = get_name()
-idade_usuario = get_year()
-sexo_usuario = get_sex()
 
-print(nome_usuario, idade_usuario, sexo_usuario)
+
 
 
 
