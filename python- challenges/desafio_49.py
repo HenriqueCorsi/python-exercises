@@ -21,14 +21,21 @@ def loading():
 cont = True
 
 while cont:
-    num = int(input('\nInsira um valor: '))
-    if num > 0:
-        loading()
-        gera_tabuada(num)
-    else: 
-        loading()
-        print('Até Breve!!')
-        cont = False
+    try:
+        num = int(input('\nInsira um valor: '))
+    except Exception as e:
+        os.system('cls')
+        print('Valor Inválido!')
+        time.sleep(0.5)
+        os.system('cls')
+    else:
+        if num > 0:
+            loading()
+            gera_tabuada(num)
+        else: 
+            loading()
+            print('Até Breve!!')
+            cont = False
 
 
 
