@@ -31,7 +31,7 @@ def create_main_character():
         'exp_MAX': 0,
         'HP': 1000,
         'hp_MAX': 1000,
-        'Dano': 35
+        'Dano': 50
     }
 
     return main_character
@@ -58,12 +58,31 @@ def get_npc(num):
 
 #Printa na tela os atributos do NPC
 def print_npc():
-    get_npc(5)
+    system('cls')
+    get_npc(3)
     cont = 0
     for x in list_npc:
         cont += 1
         print(f'NPC: 0{cont} | Classe: {x['Classe']} | Level: {x['Level']} | HP: {x['HP']} | Dano: {x['Dano']}')
+        print('---------------------------------------------------------------')
+
+#Personagem Principal Ataca
+def character_main_attack(npc):
+    main_character = create_main_character()
+    npc['HP'] -=  main_character['Dano']
+
+def result_attack_character_main(npc):
+    print('\n')
+    print('Resultado do Ataque')
+    print('---------------------------------------------------------------')
+    select_npc = list_npc[npc]
+    character_main_attack(select_npc)
+    print(list_npc[npc])
 
 
 print_npc()
+
+result_attack_character_main(0)
+
+
 
