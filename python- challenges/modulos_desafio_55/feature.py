@@ -36,6 +36,7 @@ def pega_idade():
         else:
             return idade
 
+#Cadastra Nome
 def cadastra_dados(num01, num02):
     try:
         arquivo = open("python- challenges/desafio_55.txt", 'a')
@@ -43,7 +44,7 @@ def cadastra_dados(num01, num02):
         print(f'Erro: {e}')
     else:
         try:
-            arquivo.write(f'{num01} -> {num02}\n')
+            arquivo.write(f'{num01} - {num02} anos\n')
         except Exception as e:
             print(F'Erro: {e}')
         else:
@@ -56,6 +57,7 @@ def cadastra_dados(num01, num02):
             sleep(1)
             arquivo.close()
 
+#Vizualiza Dados Cadastrados
 def vizualizar_dados():
         try:
             arquivo = open("python- challenges/desafio_55.txt", 'r')
